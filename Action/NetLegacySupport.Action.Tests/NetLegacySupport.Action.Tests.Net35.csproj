@@ -7,12 +7,12 @@
     <ProjectGuid>{CDE34722-71E1-4B37-AC8C-FB05B3CD0772}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetLegacySupport.Tuple.Tests</RootNamespace>
-    <AssemblyName>NetLegacySupport.Tuple.Tests</AssemblyName>
+    <RootNamespace>NetLegacySupport.Action.Tests</RootNamespace>
+    <AssemblyName>NetLegacySupport.Action.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <BaseIntermediateOutputPath>..\output\$(AssemblyName)\obj\Net20\</BaseIntermediateOutputPath>
-    <OutputPath>..\output\$(AssemblyName)\bin\Net20\$(Configuration)\</OutputPath>
+    <BaseIntermediateOutputPath>..\output\$(AssemblyName)\obj\Net35\</BaseIntermediateOutputPath>
+    <OutputPath>..\output\$(AssemblyName)\bin\Net35\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 
-namespace NetLegacySupport.Tuple.Tests.Net20
+namespace NetLegacySupport.Action.Tests
 {
     public class TestAction : AssertionHelper
     {
@@ -30,109 +30,109 @@ namespace NetLegacySupport.Tuple.Tests.Net20
         [Test]
         public static void TestAction_0()
         {
-            Assert.NotNull(new Action(Test));
+            Assert.NotNull(new System.Action(Test));
         }
 
         [Test]
         public static void TestAction_1()
         {
-            Assert.NotNull(new Action<int>(Test));
+            Assert.NotNull(new System.Action<int>(Test));
         }
 
         [Test]
         public static void TestAction_2()
         {
-            Assert.NotNull(new Action<int, int>(Test));
+            Assert.NotNull(new System.Action<int, int>(Test));
         }
 
         [Test]
         public static void TestAction_3()
         {
-            Assert.NotNull(new Action<int, int, int>(Test));
+            Assert.NotNull(new System.Action<int, int, int>(Test));
         }
 
         [Test]
         public static void TestAction_4()
         {
-            Assert.NotNull(new Action<int, int, int, int>(Test));
+            Assert.NotNull(new System.Action<int, int, int, int>(Test));
         }
 
         [Test]
         public static void TestAction_5()
         {
-            Assert.NotNull(new Action<int, int, int, int, int>(Test));
+            Assert.NotNull(new System.Action<int, int, int, int, int>(Test));
         }
 
         [Test]
         public static void TestAction_6()
         {
-            Assert.NotNull(new Action<int, int, int, int, int, int>(Test));
+            Assert.NotNull(new System.Action<int, int, int, int, int, int>(Test));
         }
 
         [Test]
         public static void TestAction_7()
         {
-            Assert.NotNull(new Action<int, int, int, int, int, int, int>(Test));
+            Assert.NotNull(new System.Action<int, int, int, int, int, int, int>(Test));
         }
 
         [Test]
         public static void TestAction_8()
         {
-            Assert.NotNull(new Action<int, int, int, int, int, int, int, int>(Test));
+            Assert.NotNull(new System.Action<int, int, int, int, int, int, int, int>(Test));
         }
 
         [Test]
         public static void TestFunc_0()
         {
-            Assert.NotNull(new Func<int>(Return));
+            Assert.NotNull(new System.Func<int>(Return));
         }
 
         [Test]
         public static void TestFunc_1()
         {
-            Assert.NotNull(new Func<int, int>(Return));
+            Assert.NotNull(new System.Func<int, int>(Return));
         }
 
         [Test]
         public static void TestFunc_2()
         {
-            Assert.NotNull(new Func<int, int, int>(Return));
+            Assert.NotNull(new System.Func<int, int, int>(Return));
         }
 
         [Test]
         public static void TestFunc_3()
         {
-            Assert.NotNull(new Func<int, int, int, int>(Return));
+            Assert.NotNull(new System.Func<int, int, int, int>(Return));
         }
 
         [Test]
         public static void TestFunc_4()
         {
-            Assert.NotNull(new Func<int, int, int, int, int>(Return));
+            Assert.NotNull(new System.Func<int, int, int, int, int>(Return));
         }
 
         [Test]
         public static void TestFunc_5()
         {
-            Assert.NotNull(new Func<int, int, int, int, int, int>(Return));
+            Assert.NotNull(new System.Func<int, int, int, int, int, int>(Return));
         }
 
         [Test]
         public static void TestFunc_6()
         {
-            Assert.NotNull(new Func<int, int, int, int, int, int, int>(Return));
+            Assert.NotNull(new System.Func<int, int, int, int, int, int, int>(Return));
         }
 
         [Test]
         public static void TestFunc_7()
         {
-            Assert.NotNull(new Func<int, int, int, int, int, int, int, int>(Return));
+            Assert.NotNull(new System.Func<int, int, int, int, int, int, int, int>(Return));
         }
 
         [Test]
         public static void TestFunc_8()
         {
-            Assert.NotNull(new Func<int, int, int, int, int, int, int, int, int>(Return));
+            Assert.NotNull(new System.Func<int, int, int, int, int, int, int, int, int>(Return));
         }
     }
 }

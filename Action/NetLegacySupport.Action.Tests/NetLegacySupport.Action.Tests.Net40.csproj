@@ -7,25 +7,25 @@
     <ProjectGuid>{CDE34722-71E1-4B37-AC8C-FB05B3CD0772}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetLegacySupport.Tuple.Tests</RootNamespace>
-    <AssemblyName>NetLegacySupport.Tuple.Tests</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <RootNamespace>NetLegacySupport.Action.Tests</RootNamespace>
+    <AssemblyName>NetLegacySupport.Action.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <BaseIntermediateOutputPath>..\output\$(AssemblyName)\obj\Net20\</BaseIntermediateOutputPath>
-    <OutputPath>..\output\$(AssemblyName)\bin\Net20\$(Configuration)\</OutputPath>
+    <BaseIntermediateOutputPath>..\output\$(AssemblyName)\obj\Net40\</BaseIntermediateOutputPath>
+    <OutputPath>..\output\$(AssemblyName)\bin\Net40\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE;NET20</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;NET20</DefineConstants>
+    <DefineConstants>TRACE;NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -43,16 +43,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NetLegacySupport.Action\NetLegacySupport.Action.Net20.csproj">
+    <ProjectReference Include="..\NetLegacySupport.Action\NetLegacySupport.Action.Net40.csproj">
       <Project>{74075621-f658-4a8d-96ff-b05413a7a77a}</Project>
-      <Name>NetLegacySupport.Action.Net20</Name>
+      <Name>NetLegacySupport.Action.Net40</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
