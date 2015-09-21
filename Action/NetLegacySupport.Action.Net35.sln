@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetLegacySupport.Action.Net35", "NetLegacySupport.Action\NetLegacySupport.Action.Net35.csproj", "{74075621-F658-4A8D-96FF-B05413A7A77A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetLegacySupport.Tuple.Tests.Net35", "NetLegacySupport.Tuple.Tests\NetLegacySupport.Tuple.Tests.Net35.csproj", "{CDE34722-71E1-4B37-AC8C-FB05B3CD0772}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74075621-F658-4A8D-96FF-B05413A7A77A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74075621-F658-4A8D-96FF-B05413A7A77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74075621-F658-4A8D-96FF-B05413A7A77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74075621-F658-4A8D-96FF-B05413A7A77A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDE34722-71E1-4B37-AC8C-FB05B3CD0772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE34722-71E1-4B37-AC8C-FB05B3CD0772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE34722-71E1-4B37-AC8C-FB05B3CD0772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE34722-71E1-4B37-AC8C-FB05B3CD0772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
