@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NetLegacySupport.Action, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NetLegacySupport.Action.1.0.2\lib\net20\NetLegacySupport.Action.dll</HintPath>
+    <Reference Include="NetLegacySupport.Action, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetLegacySupport.Action.1.0.3\lib\net20\NetLegacySupport.Action.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

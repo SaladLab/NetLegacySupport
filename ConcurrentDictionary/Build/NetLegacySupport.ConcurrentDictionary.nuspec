@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>NetLegacySupport.ConcurrentDictionary</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>NetLegacySupport.ConcurrentDictionary</title>
     <description>System.ConcurrentDictionary for .NET Framework 2.0, 3.5. This is a backport from .NET Core.</description>
     <authors>Microsoft</authors>
@@ -11,7 +11,7 @@
     <licenseUrl>https://raw.githubusercontent.com/SaladbowlCreative/NetLegacySupport/master/LICENSE</licenseUrl>
     <tags>.net framework legacy support concurrent dictionary</tags>
     <dependencies>
-		<dependency id="NetLegacySupport.Action" version="1.0" />
+		<dependency id="NetLegacySupport.Action" version="1.0.3" />
     </dependencies>
   </metadata>
 </package>
