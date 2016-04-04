@@ -1,14 +1,10 @@
 version: 1.1.0.{build}
 os: Visual Studio 2015
-configuration: Debug
-before_build:
-- cmd: nuget restore
-build:
-  project: NetLegacySupport.sln
-  verbosity: minimal
-test: on
 environment:
   NUGETKEY:
     secure: z2fJQckgBQJ7IKfjOyrZYPM2+xDj4xYuqaUDBG7MrJs+b1bNc0vzYMTxpF6Sb1mA
-deploy_script:
-- cmd: build.cmd nuget nugetkey=%NUGETKEY% nugetpublishurl=https://www.myget.org/F/saladbowlcreative/api/v2/package nugetprerelease=%APPVEYOR_BUILD_NUMBER%
+  COVERALLSKEY:
+    secure: Zyppdxjp/FCADlmcIWWEz+hDqNLwdUYXoI0gOkqs2M9ZRXOeRDdEHp8ALb3Mr+CD
+test: off
+build_script:
+- cmd: build.cmd ci nugetkey=%NUGETKEY% nugetpublishurl=https://www.myget.org/F/saladlab/api/v2/package nugetprerelease=%APPVEYOR_BUILD_NUMBER% coverallskey=%COVERALLSKEY%

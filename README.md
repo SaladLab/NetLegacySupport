@@ -1,5 +1,8 @@
 # NetLegacySupport
 
+[![Build status](https://ci.appveyor.com/api/projects/status/0v2wraqkyyltgyg1?svg=true)](https://ci.appveyor.com/project/veblush/netlegacysupport)
+[![Coverage Status](https://coveralls.io/repos/github/SaladLab/AsyncWorker/badge.svg?branch=master)](https://coveralls.io/github/SaladLab/NetLegacySupport?branch=master)
+
 Library helps supporting old .NET frameworks like .NET 2.0 and 3.5.
 This is a backport from .NET Core. Following classes are provided:
 
