@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NetLegacySupport.Action")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Saladbowl Creative")]
+[assembly: AssemblyCompany("SaladLab")]
 [assembly: AssemblyProduct("NetLegacySupport.Action")]
-[assembly: AssemblyCopyright("Copyright © Saladbowl Creative 2015")]
+[assembly: AssemblyCopyright("Copyright © 2016 SaladLab")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
