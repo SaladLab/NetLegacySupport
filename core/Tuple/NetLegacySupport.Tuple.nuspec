@@ -7,8 +7,8 @@
     <authors>Microsoft</authors>
     <owners>Esun Kim</owners>
     <description>System.Tuple for .NET Framework 2.0, 3.5. This is a backport from .NET Core.</description>
-    <projectUrl>https://github.com/SaladbowlCreative/NetLegacySupport</projectUrl>
-    <licenseUrl>https://raw.githubusercontent.com/SaladbowlCreative/NetLegacySupport/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/SaladLab/NetLegacySupport</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/SaladLab/NetLegacySupport/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>@releaseNotes@</releaseNotes>
     <tags>.net framework legacy support tuple</tags>
