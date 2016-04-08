@@ -1,0 +1,8 @@
+{
+  "id": "NetLegacySupport",
+  "files": [
+     "Action.Net35/bin/Release/NetLegacySupport.Action.dll",
+     "ConcurrentDictionary.Net35/bin/Release/NetLegacySupport.ConcurrentDictionary.dll",
+     "Tuple.Net35/bin/Release/NetLegacySupport.Tuple.dll"
+  ]
+}
