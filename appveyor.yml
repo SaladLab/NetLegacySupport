@@ -13,4 +13,5 @@ artifacts:
     name: NugetPackage
   - path: './bin/unity/*.unitypackage'
     name: UnityPackage
- 
+cache:
+- packages -> **\packages.config
