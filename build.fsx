@@ -39,6 +39,8 @@ Target "Pack" <| fun _ -> ()
 
 Target "PublishNuget" <| fun _ -> publishNugetPackages solution
 
+Target "PublishUnity" <| fun _ -> ()
+
 Target "Publish" <| fun _ -> ()
 
 Target "CI" <| fun _ -> ()
@@ -57,10 +59,11 @@ Target "Help" <| fun _ ->
 let isPublishOnly = getBuildParam "publishonly"
 
 "Build" ==> "PackNuget" =?> ("PublishNuget", isPublishOnly = "")
-"Build" ==> "PackUnity"
+"Build" ==> "PackUnity" =?> ("PublishUnity", isPublishOnly = "")
 "PackNuget" ==> "Pack"
 "PackUnity" ==> "Pack"
 "PublishNuget" ==> "Publish"
+"PublishUnity" ==> "Publish"
 
 "Test" ==> "CI"
 "Cover" ==> "CI"
