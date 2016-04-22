@@ -31,15 +31,15 @@ Target "Test" <| fun _ -> testSolution solution
 
 Target "Cover" <| fun _ -> coverSolution solution
 
-Target "Nuget" <| fun _ ->
-    createNugetPackages solution
-    publishNugetPackages solution
+Target "PackNuget" <| fun _ -> createNugetPackages solution
 
-Target "CreateNuget" <| fun _ ->
-    createNugetPackages solution
+Target "PackUnity" <| fun _ -> packUnityPackage "./core/UnityPackage/unitypackage.json"
 
-Target "PublishNuget" <| fun _ ->
-    publishNugetPackages solution
+Target "Pack" <| fun _ -> ()
+
+Target "PublishNuget" <| fun _ -> publishNugetPackages solution
+
+Target "Publish" <| fun _ -> ()
 
 Target "CI" <| fun _ -> ()
 
@@ -52,12 +52,18 @@ Target "Help" <| fun _ ->
   ==> "Build"
   ==> "Test"
 
-"Build" ==> "Nuget"
-"Build" ==> "CreateNuget"
 "Build" ==> "Cover"
+
+let isPublishOnly = getBuildParam "publishonly"
+
+"Build" ==> "PackNuget" =?> ("PublishNuget", isPublishOnly = "")
+"Build" ==> "PackUnity"
+"PackNuget" ==> "Pack"
+"PackUnity" ==> "Pack"
+"PublishNuget" ==> "Publish"
 
 "Test" ==> "CI"
 "Cover" ==> "CI"
-"Nuget" ==> "CI"
+"Publish" ==> "CI"
 
 RunTargetOrDefault "Help"
