@@ -33,7 +33,7 @@ Target "Cover" <| fun _ -> coverSolution solution
 
 Target "PackNuget" <| fun _ -> createNugetPackages solution
 
-Target "PackUnity" <| fun _ -> packUnityPackage "./core/UnityPackage/unitypackage.json"
+Target "PackUnity" <| fun _ -> packUnityPackage "./core/UnityPackage/NetLegacySupport.unitypackage.json"
 
 Target "Pack" <| fun _ -> ()
 
