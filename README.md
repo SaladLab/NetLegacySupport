@@ -52,7 +52,7 @@ Console.WriteLine(t); // (1, "One")
 
 ## ConcurrentDictionary
 
-ConcurrentDictionary is quite usuful dictionary with a thread-safe feature.
+ConcurrentDictionary is quite useful dictionary with a thread-safe feature.
 If your project is targeted toward .NET 3.5 only, 
 [Task Parallel Library for .NET 3.5](https://www.nuget.org/packages/TaskParallelLibrary/) can be an option.
 
