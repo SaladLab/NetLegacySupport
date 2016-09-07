@@ -1,6 +1,6 @@
 {
   "id": "NetLegacySupport",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "authors": [ "Microsoft" ],
   "owners": [ "Esun Kim" ],
   "description": "Action, Func, Tuple and ConcurrentDictionary for Unity3D. This is a backport from .NET Core.",
