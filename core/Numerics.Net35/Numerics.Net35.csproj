@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{198669A4-1590-4AA2-A0FA-8B40AE63B1C1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>NetLegacySupport.Numerics</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\NetLegacySupport.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NET35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NET35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Numerics\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\Properties\AssemblyInfoGenerated.cs">
+      <Link>Properties\AssemblyInfoGenerated.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigInteger.cs">
+      <Link>System\Numerics\BigInteger.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigIntegerCalculator.AddSub.cs">
+      <Link>System\Numerics\BigIntegerCalculator.AddSub.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigIntegerCalculator.BitsBuffer.cs">
+      <Link>System\Numerics\BigIntegerCalculator.BitsBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigIntegerCalculator.DivRem.cs">
+      <Link>System\Numerics\BigIntegerCalculator.DivRem.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigIntegerCalculator.FastReducer.cs">
+      <Link>System\Numerics\BigIntegerCalculator.FastReducer.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigIntegerCalculator.GcdInv.cs">
+      <Link>System\Numerics\BigIntegerCalculator.GcdInv.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigIntegerCalculator.PowMod.cs">
+      <Link>System\Numerics\BigIntegerCalculator.PowMod.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigIntegerCalculator.SquMul.cs">
+      <Link>System\Numerics\BigIntegerCalculator.SquMul.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\BigNumber.cs">
+      <Link>System\Numerics\BigNumber.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\Complex.cs">
+      <Link>System\Numerics\Complex.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\Globalization\FormatProvider.BigInteger.cs">
+      <Link>System\Globalization\FormatProvider.BigInteger.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\Globalization\FormatProvider.Number.cs">
+      <Link>System\Globalization\FormatProvider.Number.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\Globalization\FormatProvider.NumberBuffer.cs">
+      <Link>System\Globalization\FormatProvider.NumberBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics\System\Numerics\NumericsHelpers.cs">
+      <Link>System\Numerics\NumericsHelpers.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

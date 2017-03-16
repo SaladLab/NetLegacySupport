@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2713DDF-FAE8-45B6-AB87-D95FD2AAC86D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>NetLegacySupport.Numerics.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NET40</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NET40</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.0.5813.39032, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NUnit.3.0.1\lib\net40\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Numerics.Tests\BigInteger\absolutevalue.cs">
+      <Link>BigInteger\absolutevalue.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\add.cs">
+      <Link>BigInteger\add.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\BigIntegerToStringTests.cs">
+      <Link>BigInteger\BigIntegerToStringTests.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\BigIntTools.cs">
+      <Link>BigInteger\BigIntTools.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\cast_from.cs">
+      <Link>BigInteger\cast_from.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\cast_to.cs">
+      <Link>BigInteger\cast_to.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\Comparison.cs">
+      <Link>BigInteger\Comparison.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\ctor.cs">
+      <Link>BigInteger\ctor.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\divide.cs">
+      <Link>BigInteger\divide.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\divrem.cs">
+      <Link>BigInteger\divrem.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\Driver.cs">
+      <Link>BigInteger\Driver.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\gcd.cs">
+      <Link>BigInteger\gcd.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\IsEven.cs">
+      <Link>BigInteger\IsEven.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\IsOne.cs">
+      <Link>BigInteger\IsOne.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\IsPowerOfTwo.cs">
+      <Link>BigInteger\IsPowerOfTwo.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\IsZero.cs">
+      <Link>BigInteger\IsZero.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\log.cs">
+      <Link>BigInteger\log.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\log02.cs">
+      <Link>BigInteger\log02.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\log10.cs">
+      <Link>BigInteger\log10.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\max.cs">
+      <Link>BigInteger\max.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\min.cs">
+      <Link>BigInteger\min.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\modpow.cs">
+      <Link>BigInteger\modpow.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\multiply.cs">
+      <Link>BigInteger\multiply.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\MyBigInt.cs">
+      <Link>BigInteger\MyBigInt.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\negate.cs">
+      <Link>BigInteger\negate.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_add.cs">
+      <Link>BigInteger\op_add.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_and.cs">
+      <Link>BigInteger\op_and.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_decrement.cs">
+      <Link>BigInteger\op_decrement.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_divide.cs">
+      <Link>BigInteger\op_divide.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_increment.cs">
+      <Link>BigInteger\op_increment.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_leftshift.cs">
+      <Link>BigInteger\op_leftshift.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_minus.cs">
+      <Link>BigInteger\op_minus.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_modulus.cs">
+      <Link>BigInteger\op_modulus.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_multiply.cs">
+      <Link>BigInteger\op_multiply.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_not.cs">
+      <Link>BigInteger\op_not.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_or.cs">
+      <Link>BigInteger\op_or.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_plus.cs">
+      <Link>BigInteger\op_plus.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_rightshift.cs">
+      <Link>BigInteger\op_rightshift.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_subtract.cs">
+      <Link>BigInteger\op_subtract.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\op_xor.cs">
+      <Link>BigInteger\op_xor.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\parse.cs">
+      <Link>BigInteger\parse.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\PerformanceTests.cs">
+      <Link>BigInteger\PerformanceTests.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\pow.cs">
+      <Link>BigInteger\pow.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\properties.cs">
+      <Link>BigInteger\properties.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\remainder.cs">
+      <Link>BigInteger\remainder.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\sign.cs">
+      <Link>BigInteger\sign.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\stackcalculator.cs">
+      <Link>BigInteger\stackcalculator.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\subtract.cs">
+      <Link>BigInteger\subtract.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\BigInteger\ToByteArray.cs">
+      <Link>BigInteger\ToByteArray.cs</Link>
+    </Compile>
+    <Compile Include="..\Numerics.Tests\ComplexTests.cs">
+      <Link>ComplexTests.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Action.Net40\Action.Net40.csproj">
+      <Project>{8e41d66f-aacc-4d7c-8766-dfd20704a3d2}</Project>
+      <Name>Action.Net40</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tuple.Net40\Tuple.Net40.csproj">
+      <Project>{df53f862-9220-4c36-9973-b7e899ea4596}</Project>
+      <Name>Tuple.Net40</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
