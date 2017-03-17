@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunCtorInt32Tests()
+#if NET20
+        public static void RunCtorInt32Tests_NET20()
+#elif NET35
+        public static void RunCtorInt32Tests_NET35()
+#elif NET40
+        public static void RunCtorInt32Tests_NET40()
+#endif
         {
             // ctor(Int32): Int32.MinValue
             VerifyCtorInt32(Int32.MinValue);
@@ -64,7 +70,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCtorInt64Tests()
+#if NET20
+        public static void RunCtorInt64Tests_NET20()
+#elif NET35
+        public static void RunCtorInt64Tests_NET35()
+#elif NET40
+        public static void RunCtorInt64Tests_NET40()
+#endif
         {
             // ctor(Int64): Int64.MinValue
             VerifyCtorInt64(Int64.MinValue);
@@ -128,7 +140,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCtorUInt32Tests()
+#if NET20
+        public static void RunCtorUInt32Tests_NET20()
+#elif NET35
+        public static void RunCtorUInt32Tests_NET35()
+#elif NET40
+        public static void RunCtorUInt32Tests_NET40()
+#endif
         {
             // ctor(UInt32): UInt32.MinValue
             VerifyCtorUInt32(UInt32.MinValue);
@@ -177,7 +195,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCtorUInt64Tests()
+#if NET20
+        public static void RunCtorUInt64Tests_NET20()
+#elif NET35
+        public static void RunCtorUInt64Tests_NET35()
+#elif NET40
+        public static void RunCtorUInt64Tests_NET40()
+#endif
         {
             // ctor(UInt64): UInt64.MinValue
             VerifyCtorUInt64(UInt64.MinValue);
@@ -226,7 +250,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCtorSingleTests()
+#if NET20
+        public static void RunCtorSingleTests_NET20()
+#elif NET35
+        public static void RunCtorSingleTests_NET35()
+#elif NET40
+        public static void RunCtorSingleTests_NET40()
+#endif
         {
             // ctor(Single): Single.Minvalue
             VerifyCtorSingle(Single.MinValue);
@@ -376,7 +406,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCtorDoubleTests()
+#if NET20
+        public static void RunCtorDoubleTests_NET20()
+#elif NET35
+        public static void RunCtorDoubleTests_NET35()
+#elif NET40
+        public static void RunCtorDoubleTests_NET40()
+#endif
         {
             // ctor(Double): Double.Minvalue
             VerifyCtorDouble(Double.MinValue);
@@ -553,7 +589,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCtorDecimalTests()
+#if NET20
+        public static void RunCtorDecimalTests_NET20()
+#elif NET35
+        public static void RunCtorDecimalTests_NET35()
+#elif NET40
+        public static void RunCtorDecimalTests_NET40()
+#endif
         {
             Decimal value;
 

@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
         
         [Test]
-        public static void RunDividePositivenonZero()
+#if NET20
+        public static void RunDividePositivenonZero_NET20()
+#elif NET35
+        public static void RunDividePositivenonZero_NET35()
+#elif NET40
+        public static void RunDividePositivenonZero_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -47,7 +53,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivideNegative()
+#if NET20
+        public static void RunDivideNegative_NET20()
+#elif NET35
+        public static void RunDivideNegative_NET35()
+#elif NET40
+        public static void RunDivideNegative_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -80,7 +92,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivideAxiomX1()
+#if NET20
+        public static void RunDivideAxiomX1_NET20()
+#elif NET35
+        public static void RunDivideAxiomX1_NET35()
+#elif NET40
+        public static void RunDivideAxiomX1_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -98,7 +116,13 @@ namespace System.Numerics.Tests
 
 
         [Test]
-        public static void RunDivideAxiomX0()
+#if NET20
+        public static void RunDivideAxiomX0_NET20()
+#elif NET35
+        public static void RunDivideAxiomX0_NET35()
+#elif NET40
+        public static void RunDivideAxiomX0_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -115,7 +139,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunBoundary()
+#if NET20
+        public static void RunBoundary_NET20()
+#elif NET35
+        public static void RunBoundary_NET35()
+#elif NET40
+        public static void RunBoundary_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -130,7 +160,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunOverflow()
+#if NET20
+        public static void RunOverflow_NET20()
+#elif NET35
+        public static void RunOverflow_NET35()
+#elif NET40
+        public static void RunOverflow_NET40()
+#endif
         {
             // these values lead to an "overflow", if dividing digit by digit
             // we need to ensure that this case is being handled accordingly...

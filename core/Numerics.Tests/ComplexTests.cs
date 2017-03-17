@@ -41,7 +41,13 @@ namespace System.Numerics.Tests
         public static string[] s_supportedStandardNumericFormats = new string[] { "C", "E", "F", "G", "N", "P", "R" };
 
         [Test]
-        public static void Zero()
+#if NET20
+        public static void Zero_NET20()
+#elif NET35
+        public static void Zero_NET35()
+#elif NET40
+        public static void Zero_NET40()
+#endif
         {
             //Assert.AreEqual(0, Complex.Zero);
             VerifyRealImaginaryProperties(Complex.Zero, 0, 0);
@@ -49,7 +55,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void One()
+#if NET20
+        public static void One_NET20()
+#elif NET35
+        public static void One_NET35()
+#elif NET40
+        public static void One_NET40()
+#endif
         {
             //Assert.AreEqual(1, Complex.One);
             VerifyRealImaginaryProperties(Complex.One, 1, 0);
@@ -57,7 +69,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ImaginaryOne()
+#if NET20
+        public static void ImaginaryOne_NET20()
+#elif NET35
+        public static void ImaginaryOne_NET35()
+#elif NET40
+        public static void ImaginaryOne_NET40()
+#endif
         {
             VerifyRealImaginaryProperties(Complex.ImaginaryOne, 0, 1);
             VerifyMagnitudePhaseProperties(Complex.ImaginaryOne, 1, Math.PI / 2);
@@ -193,7 +211,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Valid_2_TestData))]
         [TestCaseSource(nameof(Random_2_TestData))]
         [TestCaseSource(nameof(Invalid_2_TestData))]
-        public static void Ctor_Double_Double(double real, double imaginary)
+#if NET20
+        public static void Ctor_Double_Double_NET20(double real, double imaginary)
+#elif NET35
+        public static void Ctor_Double_Double_NET35(double real, double imaginary)
+#elif NET40
+        public static void Ctor_Double_Double_NET40(double real, double imaginary)
+#endif
         {
             var complex = new Complex(real, imaginary);
             VerifyRealImaginaryProperties(complex, real, imaginary);
@@ -203,10 +227,23 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(Random_2_TestData))]
         [TestCaseSource(nameof(Boundaries_2_TestData))]
-        public static void Abs(double real, double imaginary)
+#if NET20
+        public static void Abs_NET20(double real, double imaginary)
+#elif NET35
+        public static void Abs_NET35(double real, double imaginary)
+#elif NET40
+        public static void Abs_NET40(double real, double imaginary)
+#endif
         {
             double expected = Math.Sqrt(real * real + imaginary * imaginary);
-            Abs_Advanced(real, imaginary, expected);
+
+#if NET20
+            Abs_Advanced_NET20(real, imaginary, expected);
+#elif NET35
+            Abs_Advanced_NET35(real, imaginary, expected);
+#elif NET40
+            Abs_Advanced_NET40(real, imaginary, expected);
+#endif
         }
 
         public static IEnumerable<object[]> Abs_Advanced_TestData()
@@ -227,7 +264,13 @@ namespace System.Numerics.Tests
 
         [Theory]
         [TestCaseSource(nameof(Abs_Advanced_TestData))]
-        public static void Abs_Advanced(double real, double imaginary, double expected)
+#if NET20
+        public static void Abs_Advanced_NET20(double real, double imaginary, double expected)
+#elif NET35
+        public static void Abs_Advanced_NET35(double real, double imaginary, double expected)
+#elif NET40
+        public static void Abs_Advanced_NET40(double real, double imaginary, double expected)
+#endif
         {
             var complex = new Complex(real, imaginary);
             double abs = Complex.Abs(complex);
@@ -253,7 +296,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(ACos_Basic_TestData))]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void ACos_Basic(double real, double imaginary)
+#if NET20
+        public static void ACos_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void ACos_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void ACos_Basic_NET40(double real, double imaginary)
+#endif
         {
             // Formula used in the feature: arccos(z) = -iln(z + iSqrt(value*value-1))
             // Verification is done with z = ACos(Cos(z));
@@ -315,7 +364,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Add_TestData))]
         [TestCaseSource(nameof(Random_4_TestData))]
         [TestCaseSource(nameof(Invalid_4_TestData))]
-        public static void Add(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#if NET20
+        public static void Add_NET20(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#elif NET35
+        public static void Add_NET35(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#elif NET40
+        public static void Add_NET40(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#endif
         {
             var left = new Complex(realLeft, imaginaryLeft);
             var right = new Complex(realRight, imaginaryRight);
@@ -336,7 +391,13 @@ namespace System.Numerics.Tests
         [Theory]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void ASin_Basic(double real, double imaginary)
+#if NET20
+        public static void ASin_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void ASin_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void ASin_Basic_NET40(double real, double imaginary)
+#endif
         {
             // Formula used in the feature: arcsin(z) = -iln(iz + Sqrt(1-z*z))
             // Verification is done with z = ASin(Sin(z));
@@ -382,7 +443,13 @@ namespace System.Numerics.Tests
         [Theory]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void ATan_Basic(double real, double imaginary)
+#if NET20
+        public static void ATan_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void ATan_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void ATan_Basic_NET40(double real, double imaginary)
+#endif
         {
             // Formula used in the feature: Atan(z) = (i/2) * (log(1-iz) - log(1+iz))
             // Verification is done with z = ATan(Tan(z));
@@ -428,7 +495,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
         [TestCaseSource(nameof(Random_2_TestData))]
         [TestCaseSource(nameof(Invalid_2_TestData))]
-        public static void Conjugate(double real, double imaginary)
+#if NET20
+        public static void Conjugate_NET20(double real, double imaginary)
+#elif NET35
+        public static void Conjugate_NET35(double real, double imaginary)
+#elif NET40
+        public static void Conjugate_NET40(double real, double imaginary)
+#endif
         {
             var complex = new Complex(real, imaginary);
             Complex result = Complex.Conjugate(complex);
@@ -440,7 +513,13 @@ namespace System.Numerics.Tests
         [Theory]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void Cos_Basic(double real, double imaginary)
+#if NET20
+        public static void Cos_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void Cos_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void Cos_Basic_NET40(double real, double imaginary)
+#endif
         {
             // The product formula: cos (x+iy) = cos(x)*cosh(y) - isin(x)sinh(y)
             // The verification formula: cos (z) = (Complex.Exp(i*z) + Complex.Exp(-i*z)) / 2
@@ -497,7 +576,13 @@ namespace System.Numerics.Tests
         [Theory]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void Cosh_Basic(double real, double imaginary)
+#if NET20
+        public static void Cosh_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void Cosh_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void Cosh_Basic_NET40(double real, double imaginary)
+#endif
         {
             // The product formula: cosh (x+iy) = cosh(x)*cos(y) + isinh(x)*sin(y) 
             // The verification formula: Cosh (z) = (Exp(z) + Exp(-z))/2
@@ -568,7 +653,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Divide_TestData))]
         [TestCaseSource(nameof(SmallRandom_4_TestData))]
         [TestCaseSource(nameof(Invalid_4_TestData))]
-        public static void Divide(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#if NET20
+        public static void Divide_NET20(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#elif NET35
+        public static void Divide_NET35(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#elif NET40
+        public static void Divide_NET40(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#endif
         {
             var dividend = new Complex(realLeft, imaginaryLeft);
             var divisor = new Complex(realRight, imaginaryRight);
@@ -596,7 +687,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void Equals()
+#if NET20
+        public static void Equals_NET20()
+#elif NET35
+        public static void Equals_NET35()
+#elif NET40
+        public static void Equals_NET40()
+#endif
         {
             // This is not TestCase, to workaround a niche bug, that mainly occurs on non Windows platforms.
             // This bug moves test values around to different intermediate memory locations, causing true assertions to be false.
@@ -733,7 +830,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Exp_TestData))]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void Exp(double real, double imaginary)
+#if NET20
+        public static void Exp_NET20(double real, double imaginary)
+#elif NET35
+        public static void Exp_NET35(double real, double imaginary)
+#elif NET40
+        public static void Exp_NET40(double real, double imaginary)
+#endif
         {
             Complex expected;
             // Special case the complex {double.MaxValue, double.MaxValue)
@@ -766,7 +869,13 @@ namespace System.Numerics.Tests
 
         //[ActiveIssue(6022, PlatformID.AnyUnix)]
         [Test]
-        public static void Exp_MaxReal()
+#if NET20
+        public static void Exp_MaxReal_NET20()
+#elif NET35
+        public static void Exp_MaxReal_NET35()
+#elif NET40
+        public static void Exp_MaxReal_NET40()
+#endif
         {
             // On Windows, the result is {double.PositiveInfinity, double.NaN}
             // On Unix, the result is {double.NegativeInfinity, double.NaN}
@@ -795,7 +904,13 @@ namespace System.Numerics.Tests
         [Theory]
         [TestCaseSource(nameof(FromPolarCoordinates_TestData))]
         [TestCaseSource(nameof(Invalid_2_TestData))]
-        public static void FromPolarCoordinates(double magnitude, double phase)
+#if NET20
+        public static void FromPolarCoordinates_NET20(double magnitude, double phase)
+#elif NET35
+        public static void FromPolarCoordinates_NET35(double magnitude, double phase)
+#elif NET40
+        public static void FromPolarCoordinates_NET40(double magnitude, double phase)
+#endif
         {
             Complex complex = Complex.FromPolarCoordinates(magnitude, phase);
 
@@ -831,29 +946,41 @@ namespace System.Numerics.Tests
         }
 
         [Theory]
-		[TestCaseSource(nameof(Log_TestData))]
-		[TestCaseSource(nameof(SmallRandom_4_TestData))]
-		public static void Log(double real1, double imaginary1, double real2, double imaginary2)
-		{
-			var complex1 = new Complex(real1, imaginary1);
-			var complex2 = new Complex(real2, imaginary2);
-			if (complex1 == Complex.Zero)
-			{
-				return;
-			}
+        [TestCaseSource(nameof(Log_TestData))]
+        [TestCaseSource(nameof(SmallRandom_4_TestData))]
+#if NET20
+        public static void Log_NET20(double real1, double imaginary1, double real2, double imaginary2)
+#elif NET35
+        public static void Log_NET35(double real1, double imaginary1, double real2, double imaginary2)
+#elif NET40
+        public static void Log_NET40(double real1, double imaginary1, double real2, double imaginary2)
+#endif
+        {
+            var complex1 = new Complex(real1, imaginary1);
+            var complex2 = new Complex(real2, imaginary2);
+            if (complex1 == Complex.Zero)
+            {
+                return;
+            }
 
-			VerifyLog10(complex1);
-			VerifyLogWithBase(complex1);
-			if (real1 != double.MaxValue && real1 != double.MinValue && imaginary1 != double.MaxValue && imaginary1 != double.MinValue)
-			{
-				VerifyLogWithMultiply(complex1, complex2);
-				VerifyLogWithPowerMinusOne(complex1);
-				VerifyLogWithExp(complex1);
-			}
-		}
+            VerifyLog10(complex1);
+            VerifyLogWithBase(complex1);
+            if (real1 != double.MaxValue && real1 != double.MinValue && imaginary1 != double.MaxValue && imaginary1 != double.MinValue)
+            {
+                VerifyLogWithMultiply(complex1, complex2);
+                VerifyLogWithPowerMinusOne(complex1);
+                VerifyLogWithExp(complex1);
+            }
+        }
 
-		[Test]
-        public static void Log_Zero()
+        [Test]
+#if NET20
+        public static void Log_Zero_NET20()
+#elif NET35
+        public static void Log_Zero_NET35()
+#elif NET40
+        public static void Log_Zero_NET40()
+#endif
         {
             Complex result = Complex.Log(Complex.Zero);
             VerifyRealImaginaryProperties(result, double.NegativeInfinity, 0);
@@ -955,7 +1082,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Multiply_TestData))]
         [TestCaseSource(nameof(SmallRandom_4_TestData))]
         [TestCaseSource(nameof(Invalid_4_TestData))]
-        public static void Multiply(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#if NET20
+        public static void Multiply_NET20(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#elif NET35
+        public static void Multiply_NET35(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#elif NET40
+        public static void Multiply_NET40(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#endif
         {
             var left = new Complex(realLeft, imaginaryLeft);
             var right = new Complex(realRight, imaginaryRight);
@@ -976,7 +1109,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Valid_2_TestData))]
         [TestCaseSource(nameof(Random_2_TestData))]
         [TestCaseSource(nameof(Invalid_2_TestData))]
-        public static void Negate(double real, double imaginary)
+#if NET20
+        public static void Negate_NET20(double real, double imaginary)
+#elif NET35
+        public static void Negate_NET35(double real, double imaginary)
+#elif NET40
+        public static void Negate_NET40(double real, double imaginary)
+#endif
         {
             var complex = new Complex(real, imaginary);
 
@@ -991,7 +1130,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Boundaries_2_TestData))]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(Invalid_2_TestData))]
-        public static void Pow(double real, double imaginary)
+#if NET20
+        public static void Pow_NET20(double real, double imaginary)
+#elif NET35
+        public static void Pow_NET35(double real, double imaginary)
+#elif NET40
+        public static void Pow_NET40(double real, double imaginary)
+#endif
         {
             Pow_Complex_Double(real, imaginary);
             Pow_Complex_Complex(real, imaginary);
@@ -1073,7 +1218,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
         [TestCaseSource(nameof(Invalid_2_TestData))]
-        public static void Reciprocal(double real, double imaginary)
+#if NET20
+        public static void Reciprocal_NET20(double real, double imaginary)
+#elif NET35
+        public static void Reciprocal_NET35(double real, double imaginary)
+#elif NET40
+        public static void Reciprocal_NET40(double real, double imaginary)
+#endif
         {
             var complex = new Complex(real, imaginary);
             var result = Complex.Reciprocal(complex);
@@ -1094,7 +1245,13 @@ namespace System.Numerics.Tests
         [Theory]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void Sin_Basic(double real, double imaginary)
+#if NET20
+        public static void Sin_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void Sin_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void Sin_Basic_NET40(double real, double imaginary)
+#endif
         {
             // The product formula: sin (x+iy) = sin(x)*cosh(y) + icos(x)sinh(y)
             // The verification formula: sin (z) = (Complex.Exp(i*z) - Complex.Exp(-i*z)) / (2*i)
@@ -1145,7 +1302,13 @@ namespace System.Numerics.Tests
         [Theory]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void Sinh_Basic(double real, double imaginary)
+#if NET20
+        public static void Sinh_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void Sinh_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void Sinh_Basic_NET40(double real, double imaginary)
+#endif
         {
             // The product formula: sinh (x+iy) = sinh(x)*cos(y) + icosh(x)*sin(y)
             // The verification formula: sinh (z) = (Exp(z) - Exp(-z))/2
@@ -1215,7 +1378,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Subtract_TestData))]
         [TestCaseSource(nameof(Random_4_TestData))]
         [TestCaseSource(nameof(Invalid_4_TestData))]
-        public static void Subtract(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#if NET20
+        public static void Subtract_NET20(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#elif NET35
+        public static void Subtract_NET35(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#elif NET40
+        public static void Subtract_NET40(double realLeft, double imaginaryLeft, double realRight, double imaginaryRight)
+#endif
         {
             var left = new Complex(realLeft, imaginaryLeft);
             var right = new Complex(realRight, imaginaryRight);
@@ -1256,7 +1425,13 @@ namespace System.Numerics.Tests
         [Theory]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void Tan_Basic(double real, double imaginary)
+#if NET20
+        public static void Tan_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void Tan_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void Tan_Basic_NET40(double real, double imaginary)
+#endif
         {
             double scale = Math.Cosh(2 * imaginary);
             if (!double.IsInfinity(scale))
@@ -1315,7 +1490,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Tanh_Basic_TestData))]
         [TestCaseSource(nameof(Primitives_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
-        public static void Tanh_Basic(double real, double imaginary)
+#if NET20
+        public static void Tanh_Basic_NET20(double real, double imaginary)
+#elif NET35
+        public static void Tanh_Basic_NET35(double real, double imaginary)
+#elif NET40
+        public static void Tanh_Basic_NET40(double real, double imaginary)
+#endif
         {
             // The product formula: cosh (x+iy) = sinh (x+iy) / cosh (x+iy)
             // The verification formula: Tanh (z) = (Exp(2z) -1) / (Exp(2z)+1)
@@ -1359,7 +1540,13 @@ namespace System.Numerics.Tests
         [TestCaseSource(nameof(Random_2_TestData))]
         [TestCaseSource(nameof(SmallRandom_2_TestData))]
         [TestCaseSource(nameof(Invalid_2_TestData))]
-        public static void ToString(double real, double imaginary)
+#if NET20
+        public static void ToString_NET20(double real, double imaginary)
+#elif NET35
+        public static void ToString_NET35(double real, double imaginary)
+#elif NET40
+        public static void ToString_NET40(double real, double imaginary)
+#endif
         {
             var complex = new Complex(real, imaginary);
 
@@ -1390,7 +1577,13 @@ namespace System.Numerics.Tests
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(sbyte.MaxValue)]
-        public static void Cast_SByte(sbyte value)
+#if NET20
+        public static void Cast_SByte_NET20(sbyte value)
+#elif NET35
+        public static void Cast_SByte_NET35(sbyte value)
+#elif NET40
+        public static void Cast_SByte_NET40(sbyte value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1402,7 +1595,13 @@ namespace System.Numerics.Tests
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(short.MaxValue)]
-        public static void Cast_Int16(short value)
+#if NET20
+        public static void Cast_Int16_NET20(short value)
+#elif NET35
+        public static void Cast_Int16_NET35(short value)
+#elif NET40
+        public static void Cast_Int16_NET40(short value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1414,7 +1613,13 @@ namespace System.Numerics.Tests
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(int.MaxValue)]
-        public static void Cast_Int32(int value)
+#if NET20
+        public static void Cast_Int32_NET20(int value)
+#elif NET35
+        public static void Cast_Int32_NET35(int value)
+#elif NET40
+        public static void Cast_Int32_NET40(int value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1426,7 +1631,13 @@ namespace System.Numerics.Tests
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(long.MaxValue)]
-        public static void Cast_Int64(long value)
+#if NET20
+        public static void Cast_Int64_NET20(long value)
+#elif NET35
+        public static void Cast_Int64_NET35(long value)
+#elif NET40
+        public static void Cast_Int64_NET40(long value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1436,7 +1647,13 @@ namespace System.Numerics.Tests
         [TestCase(byte.MinValue)]
         [TestCase(1)]
         [TestCase(byte.MaxValue)]
-        public static void Cast_Byte(byte value)
+#if NET20
+        public static void Cast_Byte_NET20(byte value)
+#elif NET35
+        public static void Cast_Byte_NET35(byte value)
+#elif NET40
+        public static void Cast_Byte_NET40(byte value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1446,7 +1663,13 @@ namespace System.Numerics.Tests
         [TestCase(ushort.MinValue)]
         [TestCase((ushort)1)]
         [TestCase(ushort.MaxValue)]
-        public static void Cast_UInt16(ushort value)
+#if NET20
+        public static void Cast_UInt16_NET20(ushort value)
+#elif NET35
+        public static void Cast_UInt16_NET35(ushort value)
+#elif NET40
+        public static void Cast_UInt16_NET40(ushort value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1456,7 +1679,13 @@ namespace System.Numerics.Tests
         [TestCase(uint.MinValue)]
         [TestCase((uint)1)]
         [TestCase(uint.MaxValue)]
-        public static void Cast_UInt32(uint value)
+#if NET20
+        public static void Cast_UInt32_NET20(uint value)
+#elif NET35
+        public static void Cast_UInt32_NET35(uint value)
+#elif NET40
+        public static void Cast_UInt32_NET40(uint value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1466,7 +1695,13 @@ namespace System.Numerics.Tests
         [TestCase(ulong.MinValue)]
         [TestCase((ulong)1)]
         [TestCase(ulong.MaxValue)]
-        public static void Cast_UInt64(ulong value)
+#if NET20
+        public static void Cast_UInt64_NET20(ulong value)
+#elif NET35
+        public static void Cast_UInt64_NET35(ulong value)
+#elif NET40
+        public static void Cast_UInt64_NET40(ulong value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1478,7 +1713,13 @@ namespace System.Numerics.Tests
         [TestCase(0)]
         [TestCase(1.234f)]
         [TestCase(float.MaxValue)]
-        public static void Cast_Single(float value)
+#if NET20
+        public static void Cast_Single_NET20(float value)
+#elif NET35
+        public static void Cast_Single_NET35(float value)
+#elif NET40
+        public static void Cast_Single_NET40(float value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);
@@ -1490,7 +1731,13 @@ namespace System.Numerics.Tests
         [TestCase(0)]
         [TestCase(1.234)]
         [TestCase(double.MaxValue)]
-        public static void Cast_Double(double value)
+#if NET20
+        public static void Cast_Double_NET20(double value)
+#elif NET35
+        public static void Cast_Double_NET35(double value)
+#elif NET40
+        public static void Cast_Double_NET40(double value)
+#endif
         {
             Complex complex = value;
             VerifyRealImaginaryProperties(complex, value, 0);

@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunPowPositive()
+#if NET20
+        public static void RunPowPositive_NET20()
+#elif NET35
+        public static void RunPowPositive_NET35()
+#elif NET40
+        public static void RunPowPositive_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -58,7 +64,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunPowAxiomXPow1()
+#if NET20
+        public static void RunPowAxiomXPow1_NET20()
+#elif NET35
+        public static void RunPowAxiomXPow1_NET35()
+#elif NET40
+        public static void RunPowAxiomXPow1_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -75,7 +87,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunPowAxiomXPow0()
+#if NET20
+        public static void RunPowAxiomXPow0_NET20()
+#elif NET35
+        public static void RunPowAxiomXPow0_NET35()
+#elif NET40
+        public static void RunPowAxiomXPow0_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -92,7 +110,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunPowAxiom0PowX()
+#if NET20
+        public static void RunPowAxiom0PowX_NET20()
+#elif NET35
+        public static void RunPowAxiom0PowX_NET35()
+#elif NET40
+        public static void RunPowAxiom0PowX_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -108,7 +132,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunPowAxiom1PowX()
+#if NET20
+        public static void RunPowAxiom1PowX_NET20()
+#elif NET35
+        public static void RunPowAxiom1PowX_NET35()
+#elif NET40
+        public static void RunPowAxiom1PowX_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -124,7 +154,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunPowBoundary()
+#if NET20
+        public static void RunPowBoundary_NET20()
+#elif NET35
+        public static void RunPowBoundary_NET35()
+#elif NET40
+        public static void RunPowBoundary_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -139,7 +175,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunPowNegative()
+#if NET20
+        public static void RunPowNegative_NET20()
+#elif NET35
+        public static void RunPowNegative_NET35()
+#elif NET40
+        public static void RunPowNegative_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];

@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
         
         [Test]
-        public static void RunDivideTwoLargeBI()
+#if NET20
+        public static void RunDivideTwoLargeBI_NET20()
+#elif NET35
+        public static void RunDivideTwoLargeBI_NET35()
+#elif NET40
+        public static void RunDivideTwoLargeBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -27,7 +33,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivideTwoSmallBI()
+#if NET20
+        public static void RunDivideTwoSmallBI_NET20()
+#elif NET35
+        public static void RunDivideTwoSmallBI_NET35()
+#elif NET40
+        public static void RunDivideTwoSmallBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -42,7 +54,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivideOneLargeOneSmallBI()
+#if NET20
+        public static void RunDivideOneLargeOneSmallBI_NET20()
+#elif NET35
+        public static void RunDivideOneLargeOneSmallBI_NET35()
+#elif NET40
+        public static void RunDivideOneLargeOneSmallBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -61,7 +79,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivideOneLargeOneZeroBI()
+#if NET20
+        public static void RunDivideOneLargeOneZeroBI_NET20()
+#elif NET35
+        public static void RunDivideOneLargeOneZeroBI_NET35()
+#elif NET40
+        public static void RunDivideOneLargeOneZeroBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -81,7 +105,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivideOneSmallOneZeroBI()
+#if NET20
+        public static void RunDivideOneSmallOneZeroBI_NET20()
+#elif NET35
+        public static void RunDivideOneSmallOneZeroBI_NET35()
+#elif NET40
+        public static void RunDivideOneSmallOneZeroBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -101,7 +131,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivideOneOverOne()
+#if NET20
+        public static void RunDivideOneOverOne_NET20()
+#elif NET35
+        public static void RunDivideOneOverOne_NET35()
+#elif NET40
+        public static void RunDivideOneOverOne_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -119,7 +155,13 @@ namespace System.Numerics.Tests
 
 
         [Test]
-        public static void RunDivideZeroOverBI()
+#if NET20
+        public static void RunDivideZeroOverBI_NET20()
+#elif NET35
+        public static void RunDivideZeroOverBI_NET35()
+#elif NET40
+        public static void RunDivideZeroOverBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -136,7 +178,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivideBoundary()
+#if NET20
+        public static void RunDivideBoundary_NET20()
+#elif NET35
+        public static void RunDivideBoundary_NET35()
+#elif NET40
+        public static void RunDivideBoundary_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -151,7 +199,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunOverflow()
+#if NET20
+        public static void RunOverflow_NET20()
+#elif NET35
+        public static void RunOverflow_NET35()
+#elif NET40
+        public static void RunOverflow_NET40()
+#endif
         {
             // these values lead to an "overflow", if dividing digit by digit
             // we need to ensure that this case is being handled accordingly...

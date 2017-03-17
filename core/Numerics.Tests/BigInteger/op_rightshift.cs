@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void BigShiftsTest()
+#if NET20
+        public static void BigShiftsTest_NET20()
+#elif NET35
+        public static void BigShiftsTest_NET35()
+#elif NET40
+        public static void BigShiftsTest_NET40()
+#endif
         {
             BigInteger a = new BigInteger(1);
             BigInteger b = new BigInteger(Math.Pow(2, 31));
@@ -27,7 +33,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunRightShiftTests()
+#if NET20
+        public static void RunRightShiftTests_NET20()
+#elif NET35
+        public static void RunRightShiftTests_NET35()
+#elif NET40
+        public static void RunRightShiftTests_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];

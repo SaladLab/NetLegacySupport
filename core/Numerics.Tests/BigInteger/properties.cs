@@ -13,7 +13,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunZeroTests()
+#if NET20
+        public static void RunZeroTests_NET20()
+#elif NET35
+        public static void RunZeroTests_NET35()
+#elif NET40
+        public static void RunZeroTests_NET40()
+#endif
         {
             BigInteger bigInteger;
             byte[] tempByteArray;
@@ -52,7 +58,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunOneTests()
+#if NET20
+        public static void RunOneTests_NET20()
+#elif NET35
+        public static void RunOneTests_NET35()
+#elif NET40
+        public static void RunOneTests_NET40()
+#endif
         {
             BigInteger bigInteger;
             byte[] tempByteArray;
@@ -78,7 +90,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMinusOneTests()
+#if NET20
+        public static void RunMinusOneTests_NET20()
+#elif NET35
+        public static void RunMinusOneTests_NET35()
+#elif NET40
+        public static void RunMinusOneTests_NET40()
+#endif
         {
             BigInteger bigInteger;
             byte[] tempByteArray;

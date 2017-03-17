@@ -15,7 +15,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
         
         [Test]
-        public static void RunByteImplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunByteImplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunByteImplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunByteImplicitCastToBigIntegerTests_NET40()
+#endif
         {
             // Byte Implicit Cast to BigInteger: Byte.MinValue
             VerifyByteImplicitCastToBigInteger(Byte.MinValue);
@@ -37,7 +43,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunSByteImplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunSByteImplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunSByteImplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunSByteImplicitCastToBigIntegerTests_NET40()
+#endif
         {
             // SByte Implicit Cast to BigInteger: SByte.MinValue
             VerifySByteImplicitCastToBigInteger(SByte.MinValue);
@@ -68,7 +80,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunUInt16ImplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunUInt16ImplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunUInt16ImplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunUInt16ImplicitCastToBigIntegerTests_NET40()
+#endif
         {
             // UInt16 Implicit Cast to BigInteger: UInt16.MinValue
             VerifyUInt16ImplicitCastToBigInteger(UInt16.MinValue);
@@ -90,7 +108,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunInt16ImplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunInt16ImplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunInt16ImplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunInt16ImplicitCastToBigIntegerTests_NET40()
+#endif
         {
             // Int16 Implicit Cast to BigInteger: Int16.MinValue
             VerifyInt16ImplicitCastToBigInteger(Int16.MinValue);
@@ -121,7 +145,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunUInt32ImplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunUInt32ImplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunUInt32ImplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunUInt32ImplicitCastToBigIntegerTests_NET40()
+#endif
         {
             // UInt32 Implicit Cast to BigInteger: UInt32.MinValue
             VerifyUInt32ImplicitCastToBigInteger(UInt32.MinValue);
@@ -143,7 +173,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunInt32ImplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunInt32ImplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunInt32ImplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunInt32ImplicitCastToBigIntegerTests_NET40()
+#endif
         {
             // Int32 Implicit Cast to BigInteger: Int32.MinValue
             VerifyInt32ImplicitCastToBigInteger(Int32.MinValue);
@@ -174,7 +210,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunUInt64ImplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunUInt64ImplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunUInt64ImplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunUInt64ImplicitCastToBigIntegerTests_NET40()
+#endif
         {
             // UInt64 Implicit Cast to BigInteger: UInt64.MinValue
             VerifyUInt64ImplicitCastToBigInteger(UInt64.MinValue);
@@ -196,7 +238,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunInt64ImplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunInt64ImplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunInt64ImplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunInt64ImplicitCastToBigIntegerTests_NET40()
+#endif
         {
             // Int64 Implicit Cast to BigInteger: Int64.MinValue
             VerifyInt64ImplicitCastToBigInteger(Int64.MinValue);
@@ -227,7 +275,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunSingleExplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunSingleExplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunSingleExplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunSingleExplicitCastToBigIntegerTests_NET40()
+#endif
         {
             Single value;
 
@@ -318,7 +372,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDoubleExplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunDoubleExplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunDoubleExplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunDoubleExplicitCastToBigIntegerTests_NET40()
+#endif
         {
             Double value;
 
@@ -406,7 +466,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDecimalExplicitCastToBigIntegerTests()
+#if NET20
+        public static void RunDecimalExplicitCastToBigIntegerTests_NET20()
+#elif NET35
+        public static void RunDecimalExplicitCastToBigIntegerTests_NET35()
+#elif NET40
+        public static void RunDecimalExplicitCastToBigIntegerTests_NET40()
+#endif
         {
             Decimal value;
 

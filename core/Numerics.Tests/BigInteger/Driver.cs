@@ -17,7 +17,13 @@ namespace System.Numerics.Tests
 
         [Test]
         //[OuterLoop]
-        public static void RunTests()
+#if NET20
+        public static void RunTests_NET20()
+#elif NET35
+        public static void RunTests_NET35()
+#elif NET40
+        public static void RunTests_NET40()
+#endif
         {
             int cycles = 1;
 

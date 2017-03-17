@@ -16,7 +16,13 @@ namespace System.Numerics.Tests
         public static int onePosition = 0;
 
         [Test]
-        public static void RunIsPowerOdTwoTests()
+#if NET20
+        public static void RunIsPowerOdTwoTests_NET20()
+#elif NET35
+        public static void RunIsPowerOdTwoTests_NET35()
+#elif NET40
+        public static void RunIsPowerOdTwoTests_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             BigInteger bigIntegerSmall = 0;

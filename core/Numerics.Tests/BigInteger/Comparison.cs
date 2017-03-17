@@ -11,7 +11,13 @@ namespace System.Numerics.Tests
         private const int NumberOfRandomIterations = 1;
 
         [Test]
-        public static void ComparisonTests()
+#if NET20
+        public static void ComparisonTests_NET20()
+#elif NET35
+        public static void ComparisonTests_NET35()
+#elif NET40
+        public static void ComparisonTests_NET40()
+#endif
         {
             int seed = 100;
             RunTests(seed);

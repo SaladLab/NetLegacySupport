@@ -18,7 +18,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunSimpleToStringTests()
+#if NET20
+        public static void RunSimpleToStringTests_NET20()
+#elif NET35
+        public static void RunSimpleToStringTests_NET35()
+#elif NET40
+        public static void RunSimpleToStringTests_NET40()
+#endif
         {
             String test;
 
@@ -64,7 +70,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunProviderToStringTests()
+#if NET20
+        public static void RunProviderToStringTests_NET20()
+#elif NET35
+        public static void RunProviderToStringTests_NET35()
+#elif NET40
+        public static void RunProviderToStringTests_NET40()
+#endif
         {
             NumberFormatInfo nfi = new NumberFormatInfo();
             nfi = MarkUp(nfi);
@@ -82,7 +94,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunStandardFormatToStringTests()
+#if NET20
+        public static void RunStandardFormatToStringTests_NET20()
+#elif NET35
+        public static void RunStandardFormatToStringTests_NET35()
+#elif NET40
+        public static void RunStandardFormatToStringTests_NET40()
+#endif
         {
             String test;
             String format;
@@ -276,7 +294,13 @@ namespace System.Numerics.Tests
         //}
 
         [Test]
-        public static void RunCustomFormatZeroPlaceholder()
+#if NET20
+        public static void RunCustomFormatZeroPlaceholder_NET20()
+#elif NET35
+        public static void RunCustomFormatZeroPlaceholder_NET35()
+#elif NET40
+        public static void RunCustomFormatZeroPlaceholder_NET40()
+#endif
         {
             // Zero Placeholder
             RunCustomFormatToStringTests(s_random, "0", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 1, ZeroFormatter);
@@ -285,7 +309,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatDigitPlaceholder()
+#if NET20
+        public static void RunCustomFormatDigitPlaceholder_NET20()
+#elif NET35
+        public static void RunCustomFormatDigitPlaceholder_NET35()
+#elif NET40
+        public static void RunCustomFormatDigitPlaceholder_NET40()
+#endif
         {
             // Digit Placeholder
             RunCustomFormatToStringTests(s_random, "#", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 0, ZeroFormatter);
@@ -294,7 +324,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatDecimalPoint()
+#if NET20
+        public static void RunCustomFormatDecimalPoint_NET20()
+#elif NET35
+        public static void RunCustomFormatDecimalPoint_NET35()
+#elif NET40
+        public static void RunCustomFormatDecimalPoint_NET40()
+#endif
         {
             // Decimal Point (match required digits before and after point with precision)
             RunCustomFormatToStringTests(s_random, "#.#", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 0, DecimalPointFormatter);
@@ -303,7 +339,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatThousandsSeparator()
+#if NET20
+        public static void RunCustomFormatThousandsSeparator_NET20()
+#elif NET35
+        public static void RunCustomFormatThousandsSeparator_NET35()
+#elif NET40
+        public static void RunCustomFormatThousandsSeparator_NET40()
+#endif
         {
             // Thousands Separator
             RunCustomFormatToStringTests(s_random, "#,#", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 0, ThousandsFormatter);
@@ -312,7 +354,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatNumberScaling()
+#if NET20
+        public static void RunCustomFormatNumberScaling_NET20()
+#elif NET35
+        public static void RunCustomFormatNumberScaling_NET35()
+#elif NET40
+        public static void RunCustomFormatNumberScaling_NET40()
+#endif
         {
             // Number Scaling (match scale factor to decimal places+3
             RunCustomFormatToStringTests(s_random, "#,", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 3, ScalingFormatter);
@@ -321,7 +369,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatPercentSign()
+#if NET20
+        public static void RunCustomFormatPercentSign_NET20()
+#elif NET35
+        public static void RunCustomFormatPercentSign_NET35()
+#elif NET40
+        public static void RunCustomFormatPercentSign_NET40()
+#endif
         {
             // Percent Sign
             RunCustomFormatToStringTests(s_random, "#%", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 0, PercentSymbolFormatter);
@@ -330,7 +384,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatScientificNotation()
+#if NET20
+        public static void RunCustomFormatScientificNotation_NET20()
+#elif NET35
+        public static void RunCustomFormatScientificNotation_NET35()
+#elif NET40
+        public static void RunCustomFormatScientificNotation_NET40()
+#endif
         {
             // Scientific Notation
             RunCustomFormatToStringTests(s_random, "0.000000E000", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 6, ScientificFormatter);
@@ -342,7 +402,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatEscapeChar()
+#if NET20
+        public static void RunCustomFormatEscapeChar_NET20()
+#elif NET35
+        public static void RunCustomFormatEscapeChar_NET35()
+#elif NET40
+        public static void RunCustomFormatEscapeChar_NET40()
+#endif
         {
             // Escape Character
             RunCustomFormatToStringTests(s_random, "0\\\'", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 1, ExtraFormatter(ZeroFormatter, "\'"));
@@ -352,7 +418,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatLiterals()
+#if NET20
+        public static void RunCustomFormatLiterals_NET20()
+#elif NET35
+        public static void RunCustomFormatLiterals_NET35()
+#elif NET40
+        public static void RunCustomFormatLiterals_NET40()
+#endif
         {
             // Literals
             RunCustomFormatToStringTests(s_random, "0\'.0\'", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 1, ExtraFormatter(ZeroFormatter, ".0"));
@@ -372,7 +444,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunCustomFormatSeparator()
+#if NET20
+        public static void RunCustomFormatSeparator_NET20()
+#elif NET35
+        public static void RunCustomFormatSeparator_NET35()
+#elif NET40
+        public static void RunCustomFormatSeparator_NET40()
+#endif
         {
             // Separator
             RunCustomFormatToStringTests(s_random, "00.00;0.00E000", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 2, CombinedFormatter(DecimalPointFormatter, ScientificFormatter));
@@ -384,7 +462,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void CustomFormatPerMille()
+#if NET20
+        public static void CustomFormatPerMille_NET20()
+#elif NET35
+        public static void CustomFormatPerMille_NET35()
+#elif NET40
+        public static void CustomFormatPerMille_NET40()
+#endif
         {
             // PerMillie Symbol
             RunCustomFormatToStringTests(s_random, "#\u2030", CultureInfo.CurrentCulture.NumberFormat.NegativeSign, 0, PerMilleSymbolFormatter);

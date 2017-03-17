@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static int s_seed = 100;
 
         [Test]
-        public static void RunMultiply_TwoLargeBigIntegers()
+#if NET20
+        public static void RunMultiply_TwoLargeBigIntegers_NET20()
+#elif NET35
+        public static void RunMultiply_TwoLargeBigIntegers_NET35()
+#elif NET40
+        public static void RunMultiply_TwoLargeBigIntegers_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];
@@ -35,7 +41,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_TwoLargeBigIntegers_Threshold()
+#if NET20
+        public static void RunMultiply_TwoLargeBigIntegers_Threshold_NET20()
+#elif NET35
+        public static void RunMultiply_TwoLargeBigIntegers_Threshold_NET35()
+#elif NET40
+        public static void RunMultiply_TwoLargeBigIntegers_Threshold_NET40()
+#endif
         {
             // Again, with lower threshold
             //BigIntTools.Utils.RunWithFakeThreshold("SquareThreshold", 8, () =>
@@ -51,7 +63,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_TwoSmallBigIntegers()
+#if NET20
+        public static void RunMultiply_TwoSmallBigIntegers_NET20()
+#elif NET35
+        public static void RunMultiply_TwoSmallBigIntegers_NET35()
+#elif NET40
+        public static void RunMultiply_TwoSmallBigIntegers_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];
@@ -67,7 +85,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_OneLargeOneSmall()
+#if NET20
+        public static void RunMultiply_OneLargeOneSmall_NET20()
+#elif NET35
+        public static void RunMultiply_OneLargeOneSmall_NET35()
+#elif NET40
+        public static void RunMultiply_OneLargeOneSmall_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];
@@ -96,7 +120,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_OneLargeOneZero()
+#if NET20
+        public static void RunMultiply_OneLargeOneZero_NET20()
+#elif NET35
+        public static void RunMultiply_OneLargeOneZero_NET35()
+#elif NET40
+        public static void RunMultiply_OneLargeOneZero_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];
@@ -116,7 +146,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_OneSmallOneZero()
+#if NET20
+        public static void RunMultiply_OneSmallOneZero_NET20()
+#elif NET35
+        public static void RunMultiply_OneSmallOneZero_NET35()
+#elif NET40
+        public static void RunMultiply_OneSmallOneZero_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];
@@ -136,7 +172,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_AxiomXX1()
+#if NET20
+        public static void RunMultiply_AxiomXX1_NET20()
+#elif NET35
+        public static void RunMultiply_AxiomXX1_NET35()
+#elif NET40
+        public static void RunMultiply_AxiomXX1_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];
@@ -154,7 +196,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_AxiomXX0()
+#if NET20
+        public static void RunMultiply_AxiomXX0_NET20()
+#elif NET35
+        public static void RunMultiply_AxiomXX0_NET35()
+#elif NET40
+        public static void RunMultiply_AxiomXX0_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];
@@ -172,7 +220,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_Commutat()
+#if NET20
+        public static void RunMultiply_Commutat_NET20()
+#elif NET35
+        public static void RunMultiply_Commutat_NET35()
+#elif NET40
+        public static void RunMultiply_Commutat_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];
@@ -190,7 +244,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiply_Boundary()
+#if NET20
+        public static void RunMultiply_Boundary_NET20()
+#elif NET35
+        public static void RunMultiply_Boundary_NET35()
+#elif NET40
+        public static void RunMultiply_Boundary_NET40()
+#endif
         {
             Random random = new Random(s_seed);
             byte[] tempByteArray1 = new byte[0];

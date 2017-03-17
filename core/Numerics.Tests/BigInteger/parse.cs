@@ -16,7 +16,13 @@ namespace System.Numerics.Tests
         [Test]
         //[OuterLoop]
         //[ActiveIssue(1642)]
-        public static void RunParseToStringTests()
+#if NET20
+        public static void RunParseToStringTests_NET20()
+#elif NET35
+        public static void RunParseToStringTests_NET35()
+#elif NET40
+        public static void RunParseToStringTests_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
 

@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunDecrementTests()
+#if NET20
+        public static void RunDecrementTests_NET20()
+#elif NET35
+        public static void RunDecrementTests_NET35()
+#elif NET40
+        public static void RunDecrementTests_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
 

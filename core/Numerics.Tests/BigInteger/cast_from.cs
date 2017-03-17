@@ -15,7 +15,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunByteExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunByteExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunByteExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunByteExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             Byte value = 0;
             BigInteger bigInteger;
@@ -59,7 +65,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunSByteExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunSByteExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunSByteExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunSByteExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             SByte value = 0;
             BigInteger bigInteger;
@@ -115,7 +127,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunUInt16ExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunUInt16ExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunUInt16ExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunUInt16ExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             ushort value;
             BigInteger bigInteger;
@@ -162,7 +180,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunInt16ExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunInt16ExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunInt16ExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunInt16ExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             short value;
             BigInteger bigInteger;
@@ -218,7 +242,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunUInt32ExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunUInt32ExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunUInt32ExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunUInt32ExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             uint value;
             BigInteger bigInteger;
@@ -265,7 +295,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunInt32ExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunInt32ExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunInt32ExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunInt32ExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             int value;
             BigInteger bigInteger;
@@ -321,7 +357,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunUInt64ExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunUInt64ExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunUInt64ExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunUInt64ExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             ulong value;
             BigInteger bigInteger;
@@ -368,7 +410,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunInt64ExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunInt64ExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunInt64ExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunInt64ExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             long value;
             BigInteger bigInteger;
@@ -424,7 +472,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunSingleExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunSingleExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunSingleExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunSingleExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             BigInteger bigInteger;
 
@@ -492,7 +546,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDoubleExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunDoubleExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunDoubleExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunDoubleExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             BigInteger bigInteger;
 
@@ -583,7 +643,13 @@ namespace System.Numerics.Tests
         //}
 
         [Test]
-        public static void RunDecimalExplicitCastFromBigIntegerTests()
+#if NET20
+        public static void RunDecimalExplicitCastFromBigIntegerTests_NET20()
+#elif NET35
+        public static void RunDecimalExplicitCastFromBigIntegerTests_NET35()
+#elif NET40
+        public static void RunDecimalExplicitCastFromBigIntegerTests_NET40()
+#endif
         {
             int[] bits = new int[3];
             uint temp2;

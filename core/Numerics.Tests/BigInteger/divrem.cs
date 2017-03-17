@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunDivRem_TwoLargeBI()
+#if NET20
+        public static void RunDivRem_TwoLargeBI_NET20()
+#elif NET35
+        public static void RunDivRem_TwoLargeBI_NET35()
+#elif NET40
+        public static void RunDivRem_TwoLargeBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -27,7 +33,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivRem_TwoSmallBI()
+#if NET20
+        public static void RunDivRem_TwoSmallBI_NET20()
+#elif NET35
+        public static void RunDivRem_TwoSmallBI_NET35()
+#elif NET40
+        public static void RunDivRem_TwoSmallBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -42,7 +54,13 @@ namespace System.Numerics.Tests
         }
         
         [Test]
-        public static void RunDivRem_OneSmallOneLargeBI()
+#if NET20
+        public static void RunDivRem_OneSmallOneLargeBI_NET20()
+#elif NET35
+        public static void RunDivRem_OneSmallOneLargeBI_NET35()
+#elif NET40
+        public static void RunDivRem_OneSmallOneLargeBI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -61,7 +79,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivRem_OneLargeOne0BI()
+#if NET20
+        public static void RunDivRem_OneLargeOne0BI_NET20()
+#elif NET35
+        public static void RunDivRem_OneLargeOne0BI_NET35()
+#elif NET40
+        public static void RunDivRem_OneLargeOne0BI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -81,7 +105,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivRem_OneSmallOne0BI()
+#if NET20
+        public static void RunDivRem_OneSmallOne0BI_NET20()
+#elif NET35
+        public static void RunDivRem_OneSmallOne0BI_NET35()
+#elif NET40
+        public static void RunDivRem_OneSmallOne0BI_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -101,7 +131,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void Boundary()
+#if NET20
+        public static void Boundary_NET20()
+#elif NET35
+        public static void Boundary_NET35()
+#elif NET40
+        public static void Boundary_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -116,7 +152,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunDivRemTests()
+#if NET20
+        public static void RunDivRemTests_NET20()
+#elif NET35
+        public static void RunDivRemTests_NET35()
+#elif NET40
+        public static void RunDivRemTests_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];

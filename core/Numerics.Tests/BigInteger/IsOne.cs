@@ -11,7 +11,13 @@ namespace System.Numerics.Tests
         private static int s_seed = 0;
 
         [Test]
-        public static void RunIsOneTests()
+#if NET20
+        public static void RunIsOneTests_NET20()
+#elif NET35
+        public static void RunIsOneTests_NET35()
+#elif NET40
+        public static void RunIsOneTests_NET40()
+#endif
         {
             Random random = new Random(s_seed);
 

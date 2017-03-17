@@ -13,7 +13,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunRemainderPositive()
+#if NET20
+        public static void RunRemainderPositive_NET20()
+#elif NET35
+        public static void RunRemainderPositive_NET35()
+#elif NET40
+        public static void RunRemainderPositive_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -48,7 +54,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunRemainderNegative()
+#if NET20
+        public static void RunRemainderNegative_NET20()
+#elif NET35
+        public static void RunRemainderNegative_NET35()
+#elif NET40
+        public static void RunRemainderNegative_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -81,7 +93,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunRemainderBoundary()
+#if NET20
+        public static void RunRemainderBoundary_NET20()
+#elif NET35
+        public static void RunRemainderBoundary_NET35()
+#elif NET40
+        public static void RunRemainderBoundary_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -96,7 +114,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunRemainderAxioms()
+#if NET20
+        public static void RunRemainderAxioms_NET20()
+#elif NET35
+        public static void RunRemainderAxioms_NET35()
+#elif NET40
+        public static void RunRemainderAxioms_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];

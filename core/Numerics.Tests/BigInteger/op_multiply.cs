@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void RunMultiplyPositive()
+#if NET20
+        public static void RunMultiplyPositive_NET20()
+#elif NET35
+        public static void RunMultiplyPositive_NET35()
+#elif NET40
+        public static void RunMultiplyPositive_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -64,7 +70,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiplyPositiveWith0()
+#if NET20
+        public static void RunMultiplyPositiveWith0_NET20()
+#elif NET35
+        public static void RunMultiplyPositiveWith0_NET35()
+#elif NET40
+        public static void RunMultiplyPositiveWith0_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -95,7 +107,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiplyAxiomXmult1()
+#if NET20
+        public static void RunMultiplyAxiomXmult1_NET20()
+#elif NET35
+        public static void RunMultiplyAxiomXmult1_NET35()
+#elif NET40
+        public static void RunMultiplyAxiomXmult1_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -112,7 +130,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiplyAxiomXmult0()
+#if NET20
+        public static void RunMultiplyAxiomXmult0_NET20()
+#elif NET35
+        public static void RunMultiplyAxiomXmult0_NET35()
+#elif NET40
+        public static void RunMultiplyAxiomXmult0_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -130,7 +154,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiplyAxiomComm()
+#if NET20
+        public static void RunMultiplyAxiomComm_NET20()
+#elif NET35
+        public static void RunMultiplyAxiomComm_NET35()
+#elif NET40
+        public static void RunMultiplyAxiomComm_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -145,7 +175,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiplyBoundary()
+#if NET20
+        public static void RunMultiplyBoundary_NET20()
+#elif NET35
+        public static void RunMultiplyBoundary_NET35()
+#elif NET40
+        public static void RunMultiplyBoundary_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];
@@ -160,7 +196,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunMultiplyTests()
+#if NET20
+        public static void RunMultiplyTests_NET20()
+#elif NET35
+        public static void RunMultiplyTests_NET35()
+#elif NET40
+        public static void RunMultiplyTests_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];

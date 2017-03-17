@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void SpecialRegressionTests()
+#if NET20
+        public static void SpecialRegressionTests_NET20()
+#elif NET35
+        public static void SpecialRegressionTests_NET35()
+#elif NET40
+        public static void SpecialRegressionTests_NET40()
+#endif
         {
             byte[] tempByteArray1;
             byte[] tempByteArray2;
@@ -67,7 +73,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void RunGCDTests()
+#if NET20
+        public static void RunGCDTests_NET20()
+#elif NET35
+        public static void RunGCDTests_NET35()
+#elif NET40
+        public static void RunGCDTests_NET40()
+#endif
         {
             byte[] tempByteArray1 = new byte[0];
             byte[] tempByteArray2 = new byte[0];

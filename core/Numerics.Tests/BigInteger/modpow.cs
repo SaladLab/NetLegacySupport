@@ -12,7 +12,13 @@ namespace System.Numerics.Tests
         private static Random s_random = new Random(100);
 
         [Test]
-        public static void ModPowValidSmallNumbers()
+#if NET20
+        public static void ModPowValidSmallNumbers_NET20()
+#elif NET35
+        public static void ModPowValidSmallNumbers_NET35()
+#elif NET40
+        public static void ModPowValidSmallNumbers_NET40()
+#endif
         {
             BigInteger result;
             bool b = BigInteger.TryParse("22", out result);
@@ -34,7 +40,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPowNegative()
+#if NET20
+        public static void ModPowNegative_NET20()
+#elif NET35
+        public static void ModPowNegative_NET35()
+#elif NET40
+        public static void ModPowNegative_NET40()
+#endif
         {
             byte[] tempByteArray1;
             byte[] tempByteArray2;
@@ -96,7 +108,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPow3SmallInt()
+#if NET20
+        public static void ModPow3SmallInt_NET20()
+#elif NET35
+        public static void ModPow3SmallInt_NET35()
+#elif NET40
+        public static void ModPow3SmallInt_NET40()
+#endif
         {
             byte[] tempByteArray1;
             byte[] tempByteArray2;
@@ -113,7 +131,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPow1Large2SmallInt()
+#if NET20
+        public static void ModPow1Large2SmallInt_NET20()
+#elif NET35
+        public static void ModPow1Large2SmallInt_NET35()
+#elif NET40
+        public static void ModPow1Large2SmallInt_NET40()
+#endif
         {
             byte[] tempByteArray1;
             byte[] tempByteArray2;
@@ -140,14 +164,26 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPow1Large2SmallInt_Threshold()
+#if NET20
+        public static void ModPow1Large2SmallInt_Threshold_NET20()
+#elif NET35
+        public static void ModPow1Large2SmallInt_Threshold_NET35()
+#elif NET40
+        public static void ModPow1Large2SmallInt_Threshold_NET40()
+#endif
         {
             // Again, with lower threshold
             //BigIntTools.Utils.RunWithFakeThreshold("ReducerThreshold", 8, ModPow1Large2SmallInt);
         }
 
         [Test]
-        public static void ModPow2Large1SmallInt()
+#if NET20
+        public static void ModPow2Large1SmallInt_NET20()
+#elif NET35
+        public static void ModPow2Large1SmallInt_NET35()
+#elif NET40
+        public static void ModPow2Large1SmallInt_NET40()
+#endif
         {
             byte[] tempByteArray1;
             byte[] tempByteArray2;
@@ -164,7 +200,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPow2Large1SmallInt_Threshold()
+#if NET20
+        public static void ModPow2Large1SmallInt_Threshold_NET20()
+#elif NET35
+        public static void ModPow2Large1SmallInt_Threshold_NET35()
+#elif NET40
+        public static void ModPow2Large1SmallInt_Threshold_NET40()
+#endif
         {
             // Again, with lower threshold
             //BigIntTools.Utils.RunWithFakeThreshold("ReducerThreshold", 8, ModPow2Large1SmallInt);
@@ -184,7 +226,13 @@ namespace System.Numerics.Tests
         [TestCase("736513799451968530811005754031332418210960966881742655756522735504778110620671049112529346250333710388060811959329786494662578020803", "2461175085563866950903873687720858523536520498137697316698237108626602445202960480677695918813575265778826908481129155012799", "-4722693720735888562993277045098354134891725536023070176847814685098361292027040929352405620815883795027263132404351040", "4351573186631261607388198896754285562669240685903971199359912143458682154189588696264319780329366022294935204028039787")]
         [TestCase("1596188639947986471148999794547338", "685242191738212089917782567856594513073397739443", "41848166029740752457613562518205823134173790454761036532025758411484449588176128053901271638836032557551179866133091058357374964041641117585422447497779410336188602585660372002644517668041207657383104649333118253", "39246949850380693159338034407642149926180988060650630387722725303281343126585456713282439764667310808891687831648451269002447916277601468727040185218264602698691553232132525542650964722093335105211816394635493987")]
         [TestCase("-1506852741293695463963822334869441845197951776565891060639754936248401744065969556756496718308248025911048010080232290368562210204958094544173209793990218122", "64905085725614938357105826012272472070910693443851911667721848542473785070747281964799379996923261457185847459711", "2740467233603031668807697475486217767705051", "-1905434239471820365929630558127219204166613")]
-        public static void ModPow3LargeInt(string value, string exponent, string modulus, string expected)
+#if NET20
+        public static void ModPow3LargeInt_NET20(string value, string exponent, string modulus, string expected)
+#elif NET35
+        public static void  ModPow3LargeInt_NET35(string value, string exponent, string modulus, string expected)
+#elif NET40
+        public static void  ModPow3LargeInt_NET40(string value, string exponent, string modulus, string expected)
+#endif
         {
             BigInteger valueInt = BigInteger.Parse(value);
             BigInteger exponentInt = BigInteger.Parse(exponent);
@@ -202,7 +250,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPow0Power()
+#if NET20
+        public static void ModPow0Power_NET20()
+#elif NET35
+        public static void ModPow0Power_NET35()
+#elif NET40
+        public static void ModPow0Power_NET40()
+#endif
         {
             byte[] tempByteArray1;
             byte[] tempByteArray2;
@@ -229,7 +283,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPow0Base()
+#if NET20
+        public static void ModPow0Base_NET20()
+#elif NET35
+        public static void ModPow0Base_NET35()
+#elif NET40
+        public static void ModPow0Base_NET40()
+#endif
         {
             byte[] tempByteArray1;
             byte[] tempByteArray2;
@@ -256,7 +316,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPowAxiom()
+#if NET20
+        public static void ModPowAxiom_NET20()
+#elif NET35
+        public static void ModPowAxiom_NET35()
+#elif NET40
+        public static void ModPowAxiom_NET40()
+#endif
         {
             byte[] tempByteArray1;
             byte[] tempByteArray2;
@@ -276,7 +342,13 @@ namespace System.Numerics.Tests
         }
 
         [Test]
-        public static void ModPowBoundary()
+#if NET20
+        public static void ModPowBoundary_NET20()
+#elif NET35
+        public static void ModPowBoundary_NET35()
+#elif NET40
+        public static void ModPowBoundary_NET40()
+#endif
         {
             // Check interesting cases for boundary conditions
             // You'll either be shifting a 0 or 1 across the boundary
