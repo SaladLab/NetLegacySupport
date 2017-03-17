@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>@project@</id>
+    <title>@project@@title@</title>
+    <version>@build.number@</version>
+    <authors>Microsoft</authors>
+    <owners>Esun Kim</owners>
+    <description>System.Numerics for .NET Framework 2.0, 3.5. This is a backport from .NET Core.</description>
+    <projectUrl>https://github.com/SaladLab/NetLegacySupport</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/SaladLab/NetLegacySupport/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>@releaseNotes@</releaseNotes>
+    <tags>.net framework legacy support numerics</tags>
+    @dependencies@
+    @references@
+  </metadata>
+</package>
